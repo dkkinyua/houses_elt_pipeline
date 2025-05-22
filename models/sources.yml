@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: h_data
+    database: house_data
+    schema: for_sale
+    tables:
+      - name: house_for_sale
