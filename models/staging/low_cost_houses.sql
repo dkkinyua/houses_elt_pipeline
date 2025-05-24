@@ -1,4 +1,7 @@
 select *
 from {{ source('h_data', 'house_for_sale') }}
-where price between 500000 and 10000000
+where price between (
+    select min(price)
+    from {{ source('h_data', 'house_for_sale') }}
+) and 15000000
 order by price desc
