@@ -4,6 +4,7 @@ select
         when location ilike '%karen%' then 'Karen'
         when location ilike '%runda%' then 'Runda'
         when location ilike '%westlands%' then 'Westlands'
+        when location ilike '%muthaiga%' then 'Muthaiga'
         when location ilike '%garden estate%' then 'Garden Estate'
         when location ilike '%kilimani%' then 'Kilimani'
         when location ilike '%kitusuru%' then 'Kitusuru'
@@ -18,8 +19,9 @@ select
         when location ilike '%kikuyu%' then 'Kikuyu'
         else location
     end as formatted_location,
-    count(id) as house_count
+    count(id) as house_count,
+    avg(price) as avg_price
 from 
     {{ source('h_data', 'house_for_sale') }}
 group by formatted_location
-order by house_count desc
+order by avg_price desc
