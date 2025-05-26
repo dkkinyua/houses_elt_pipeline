@@ -62,7 +62,15 @@ Replace placeholders with your Snowflake credentials.
 
 > NOTE: There's no need of running `dbt init` while cloning this repository as it will create new files and folders. Just configure your `profiles.yml` file.
 
+## Insights generated
+- Average house price per location
+
+- Most expensive houses per location
+
+- Least expensive houses per location
+
+- Average pricing per house capacity i.e. 3 bedroom, 4 bedroom
 
 
-
-
+## Conclusion
+Do you have an issue or would you like to contribute to this project? Contact me via [email](mailto:denzelkinyua11@gmail.com) or start a pull request.
